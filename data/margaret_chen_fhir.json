@@ -1,0 +1,195 @@
+{
+  "resourceType": "Bundle",
+  "id": "margaret-chen-discharge-bundle",
+  "type": "collection",
+  "timestamp": "2026-05-13T00:00:00Z",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "margaret-chen",
+        "name": [{"family": "Chen", "given": ["Margaret"]}],
+        "gender": "female",
+        "birthDate": "1944-03-15",
+        "address": [{"city": "San Francisco", "state": "CA"}]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "hip-fracture",
+        "subject": {"reference": "Patient/margaret-chen"},
+        "code": {
+          "coding": [{"system": "http://snomed.info/sct", "code": "414080002", "display": "Hip fracture"}]
+        },
+        "clinicalStatus": {"coding": [{"code": "active"}]},
+        "verificationStatus": {"coding": [{"code": "confirmed"}]},
+        "onsetDateTime": "2026-05-09"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "orif-procedure",
+        "subject": {"reference": "Patient/margaret-chen"},
+        "code": {
+          "coding": [{"system": "http://snomed.info/sct", "code": "416940007", "display": "Open reduction and internal fixation of fracture"}]
+        },
+        "status": "completed",
+        "performedDateTime": "2026-05-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "vitals-day1",
+        "subject": {"reference": "Patient/margaret-chen"},
+        "category": [{"coding": [{"code": "vital-signs"}]}],
+        "effectiveDateTime": "2026-05-10T08:00:00Z",
+        "component": [
+          {"code": {"coding": [{"code": "55284-4", "display": "Blood pressure"}]}, "valueQuantity": {"value": 158, "unit": "mmHg", "system": "http://unitsofmeasure.org"}, "dataAbsentReason": null},
+          {"code": {"coding": [{"code": "8867-4", "display": "Heart rate"}]}, "valueQuantity": {"value": 88, "unit": "/min"}},
+          {"code": {"coding": [{"code": "8310-5", "display": "Body temperature"}]}, "valueQuantity": {"value": 37.2, "unit": "Cel"}},
+          {"code": {"coding": [{"code": "2708-6", "display": "Oxygen saturation"}]}, "valueQuantity": {"value": 97, "unit": "%"}}
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "vitals-day4",
+        "subject": {"reference": "Patient/margaret-chen"},
+        "category": [{"coding": [{"code": "vital-signs"}]}],
+        "effectiveDateTime": "2026-05-13T08:00:00Z",
+        "component": [
+          {"code": {"coding": [{"code": "55284-4", "display": "Blood pressure"}]}, "valueQuantity": {"value": 132, "unit": "mmHg"}},
+          {"code": {"coding": [{"code": "8867-4", "display": "Heart rate"}]}, "valueQuantity": {"value": 74, "unit": "/min"}},
+          {"code": {"coding": [{"code": "8310-5", "display": "Body temperature"}]}, "valueQuantity": {"value": 36.8, "unit": "Cel"}},
+          {"code": {"coding": [{"code": "2708-6", "display": "Oxygen saturation"}]}, "valueQuantity": {"value": 99, "unit": "%"}}
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "warfarin",
+        "subject": {"reference": "Patient/margaret-chen"},
+        "status": "active",
+        "medicationCodeableConcept": {"coding": [{"system": "http://www.nlm.nih.gov/research/umls/rxnorm", "code": "11289", "display": "Warfarin"}]},
+        "dosage": [{"text": "5mg orally daily"}]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "ibuprofen",
+        "subject": {"reference": "Patient/margaret-chen"},
+        "status": "active",
+        "medicationCodeableConcept": {"coding": [{"system": "http://www.nlm.nih.gov/research/umls/rxnorm", "code": "5640", "display": "Ibuprofen"}]},
+        "dosage": [{"text": "400mg orally PRN pain"}]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "diphenhydramine",
+        "subject": {"reference": "Patient/margaret-chen"},
+        "status": "active",
+        "medicationCodeableConcept": {"coding": [{"system": "http://www.nlm.nih.gov/research/umls/rxnorm", "code": "3498", "display": "Diphenhydramine"}]},
+        "dosage": [{"text": "25mg orally PRN sleep"}]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "lisinopril",
+        "subject": {"reference": "Patient/margaret-chen"},
+        "status": "active",
+        "medicationCodeableConcept": {"coding": [{"display": "Lisinopril"}]},
+        "dosage": [{"text": "10mg orally daily"}]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "furosemide",
+        "subject": {"reference": "Patient/margaret-chen"},
+        "status": "active",
+        "medicationCodeableConcept": {"coding": [{"display": "Furosemide"}]},
+        "dosage": [{"text": "20mg orally daily"}]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "atorvastatin",
+        "subject": {"reference": "Patient/margaret-chen"},
+        "status": "active",
+        "medicationCodeableConcept": {"coding": [{"display": "Atorvastatin"}]},
+        "dosage": [{"text": "40mg orally daily"}]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "amlodipine",
+        "subject": {"reference": "Patient/margaret-chen"},
+        "status": "active",
+        "medicationCodeableConcept": {"coding": [{"display": "Amlodipine"}]},
+        "dosage": [{"text": "5mg orally daily"}]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "metformin",
+        "subject": {"reference": "Patient/margaret-chen"},
+        "status": "active",
+        "medicationCodeableConcept": {"coding": [{"display": "Metformin"}]},
+        "dosage": [{"text": "500mg orally twice daily"}]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "lab-wbc-day4",
+        "subject": {"reference": "Patient/margaret-chen"},
+        "code": {"coding": [{"code": "6690-2", "display": "WBC"}]},
+        "effectiveDateTime": "2026-05-13T06:00:00Z",
+        "valueQuantity": {"value": 7.4, "unit": "10*3/uL"}
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "lab-hgb-day4",
+        "subject": {"reference": "Patient/margaret-chen"},
+        "code": {"coding": [{"code": "718-7", "display": "Hemoglobin"}]},
+        "effectiveDateTime": "2026-05-13T06:00:00Z",
+        "valueQuantity": {"value": 10.8, "unit": "g/dL"}
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "lab-creatinine-day4",
+        "subject": {"reference": "Patient/margaret-chen"},
+        "code": {"coding": [{"code": "2160-0", "display": "Creatinine"}]},
+        "effectiveDateTime": "2026-05-13T06:00:00Z",
+        "valueQuantity": {"value": 1.0, "unit": "mg/dL"}
+      }
+    }
+  ],
+  "_clinicalmind_metadata": {
+    "test_case": "margaret_chen_hip_fracture_day4",
+    "expected_verdict": "CONDITIONAL",
+    "key_findings": [
+      "6 drug-drug interactions",
+      "2 Beers Criteria violations (diphenhydramine, ibuprofen)",
+      "Vitals trending to stable over 4 days",
+      "PT cleared: ambulating 50ft with walker"
+    ],
+    "created": "2026-05-13",
+    "hackathon": "Google Cloud Rapid Agent Hackathon 2026"
+  }
+}
